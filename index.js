@@ -7,7 +7,7 @@ exports.handler = function(event, context, callback) {
     var phantom = phantomjs.exec('phantomjs-script.js', 'arg1', 'arg2');
 
     phantom.stdout.on('data', function(buf) {
-        console.log('[STR] stdout "%s"', String(buf));
+        console.log('[STR:] stdout "%s"', String(buf));
     });
     phantom.stderr.on('data', function(buf) {
         console.log('[STR] stderr "%s"', String(buf));
